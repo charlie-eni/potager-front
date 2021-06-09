@@ -14,7 +14,7 @@ function App() {
 
   async function getPotager() {
     try {
-      const res = await axios.get('http://localhost:8080/api/potager');
+      const res = await axios.get('https://potager-app.herokuapp.com/api/potager');
       setListPotager([...res.data]);
 
     } catch (error) {
@@ -30,7 +30,7 @@ function App() {
           'Content-Type': 'application/json'
         },
         method: 'post',
-        url: 'http://localhost:8080/api/potager',
+        url: 'https://potager-app.herokuapp.com/api/potager',
         data
       });
 
@@ -49,7 +49,7 @@ function App() {
       < Form handleSubmit={addPotager} />
       {singleData &&
         <div className="potagerSingle">
-          <div className="fermer" onClick={() => setSingleData(null)}>fermer</div>
+          <div className="fermer" onClick={() => setSingleData(null)}>Retour</div>
           <PotagerSingle data={singleData} />
         </div>
       }
