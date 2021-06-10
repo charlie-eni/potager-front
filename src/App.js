@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import { useState } from 'react';
 import axios from 'axios';
-import PotagerMini from './PotagerMini';
-import PotagerSingle from './PotagerSingle';
-import Form from './Form';
+import PotagerMini from './components/PotagerMini/PotagerMini';
+import PotagerSingle from './components/PotagerSingle/PotagerSingle';
+import Form from './components/Form/Form';
 import './App.css';
 import {v4 as uuid} from 'uuid';
 function App() {
